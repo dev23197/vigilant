@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stay Motivated 💪</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #1f4037, #99f2c8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .quote-box {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    #quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-bottom: 20px;
+      min-height: 80px;
+    }
+
+    button {
+      background-color: #fff;
+      color: #1f4037;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1abc9c;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quote-box">
+    <h1>✨ Daily Motivation</h1>
+    <p id="quote">Click the button to get inspired!</p>
+    <button onclick="showQuote()">New Quote</button>
+  </div>
+
+  <script>
+    const quotes = [
+      "Believe in yourself and all that you are.",
+      "Push yourself, because no one else is going to do it for you.",
+      "Success is what comes after you stop making excuses.",
+      "Your limitation—it’s only your imagination.",
+      "Hard times build strong minds.",
+      "The pain you feel today will be the strength you feel tomorrow.",
+      "You are capable of amazing things.",
+      "Radhe Radhe 🌼 Keep going, you're doing great!"
+    ];
+
+    function showQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").textContent = quotes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
